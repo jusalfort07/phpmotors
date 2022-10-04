@@ -1,0 +1,150 @@
+:root {
+    --lightgray: #bababa;
+    --gray: #8d8d8d;
+    --lightblue: #a6cbeb;
+    --blue: #4c96d7;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+}
+
+.delorean{
+    position: relative;
+}
+
+.delorean img{
+    width: 100%;
+}
+
+.card-text {
+    position: absolute;
+    top: 0px;
+}
+
+.card-text h3, .card-text p{
+    color: var(--blue);
+    margin: 0px;
+}
+
+.card-btn{
+    text-align: center;
+}
+
+.card-btn button {
+    color: var(--darkgray);
+    background-color: var(--lightblue);
+    border: solid 1px var(--darkgray);
+    width: 50%;
+    height: 50px;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.delorean-reviews li {
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.delorean-upgrades .upgrade-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.upgrade{
+    text-align: center;
+    background-color: var(--blue);
+    border: 1px solid var(--darkgray);
+}
+
+.upgrade-name{
+    text-align: center;
+}
+
+.upgrade-items a{
+    margin: 0px;
+    padding: 0px;
+}
+
+.upgrade img{
+    display: block;
+    height: 75px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 37rem) {
+    .card-text h3, .card-text p{
+        color: var(--blue);
+        margin: 0px;
+        font-size: 1em;
+    }
+
+    .delorean-card {
+        margin: 5%;
+    }
+
+    .card-btn{
+        text-align: left;
+    }
+
+    .card-btn button{
+        width: 15%;
+        position: absolute;
+        bottom: 60%;
+        font-size: medium;
+        height: 40px;
+    }
+
+    .delorean-info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .delorean-reviews, .delorean-upgrades{
+        width: 50%;
+        margin: 3%;
+    }
+
+    .delorean-reviews ul li {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 64rem){
+    .card-text h3, .card-text p{
+        color: var(--blue);
+        margin: 0px;
+        font-size: 1.5em;
+    }
+
+    .delorean-card {
+        margin: 5%;
+    }
+
+    .card-btn{
+        text-align: left;
+    }
+
+    .card-btn button{
+        width: 20%;
+        position: absolute;
+        bottom: 70%;
+    }
+
+    .delorean-info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .delorean-reviews, .delorean-upgrades{
+        width: 50%;
+        margin: 3%;
+    }
+
+    .delorean-reviews ul li {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,37 @@
+:root {
+    --lightgray: #bababa;
+    --gray: #8d8d8d;
+    --lightblue: #a6cbeb;
+    --blue: #4c96d7;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+}
+
+form{
+    font-size: large;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    padding: 5px;
+}
+
+.form-div{
+    margin: 10px;
+}
+
+.form-button button {
+    padding: 5px;
+    font-size: large;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.register-link {
+    font-size: large;
+    margin: 10px;
+}

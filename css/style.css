@@ -1,0 +1,120 @@
+@import url('http://fonts.cdnfonts.com/css/falling-sky');
+
+:root {
+    --lightgray: #bababa;
+    --gray: #8d8d8d;
+    --lightblue: #a6cbeb;
+    --blue: #4c96d7;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Falling Sky', sans-serif;
+}
+
+.content{
+    background-color: var(--white);
+    width: 100%;
+    
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    left: 0px;
+}
+
+header a {
+    margin: 20px;
+    margin-right: 40px;
+    color: var(--darkgray);
+    text-decoration: none;
+    font-size: larger;
+}
+
+/* Navigation Styles */
+nav {
+    font-size: 1em;
+    clear: both;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    background-color: var(--darkgray);
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    padding: 0px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: var(--white);
+    padding: 12px 8px;
+}
+
+nav li a:hover {
+    color: var(--darkgray);
+    background-color: var(--blue);
+}
+
+/* Footer Styles */
+footer {
+    border-top: solid 5px var(--darkgray);
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0px;
+}
+
+@media only screen and (min-width: 64rem) {
+    body{
+        background-image: url(../images/site/small_check.jpg);
+    }
+
+    main{
+        padding: 10px;
+    }
+
+    main h2{
+        font-size: 2em;
+    }
+
+    .content{
+        background-color: var(--white);
+        width: 80%;
+        margin: auto;
+        border: 5px solid var(--blue);
+        border-radius: 3px;
+    }
+
+    nav ul {
+        height: 60px;
+    }
+
+    nav ul li {
+        font-size: 1.5em;
+        padding: 18px;
+    }
+}
+
+@media only screen and (min-width: 37rem) {
+    body{
+        background-image: url(/phpmotors/images/site/small_check.jpg);
+    }
+    .content{
+        background-color: var(--white);
+        width: 80%;
+        margin: auto;
+        border: 5px solid var(--blue);
+        border-radius: 3px;
+    }
+}
