@@ -26,7 +26,7 @@
 
             <form action="GET" class="log-in-form">
                 <div class="email form-div">
-                    <label for="email">
+                    <label for="clientEmail">
                         Email:
                     </label>
 
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="password form-div">
-                    <label for="password">
+                    <label for="clientPassword">
                         Password:
                     </label>
 
