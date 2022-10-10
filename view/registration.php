@@ -25,21 +25,27 @@
         <main>
             <h1>Register</h1>
 
-            <form action="POST">
+            <?php
+                if(isset($message)){
+                    echo $message;
+                }
+            ?>
+
+            <form action="/phpmotors/accounts/index.php" method="POST">
                 <div class="first-name form-div">
-                    <label for="clientFirstName">
+                    <label for="clientFirstname">
                         First Name
                     </label>
 
-                    <input type="text" name="clientFirstName" id="clientFirstName">
+                    <input type="text" name="clientFirstname" id="clientFirstname">
                 </div>
 
                 <div class="last-name form-div">
-                    <label for="clientLastName">
+                    <label for="clientLastname">
                         Last Name
                     </label>
 
-                    <input type="text" name="clientLastName" id="clientLastName">
+                    <input type="text" name="clientLastname" id="clientLastname">
                 </div>
 
                 <div class="email form-div">
@@ -66,9 +72,11 @@
                 </div>
 
                 <div class="form-button form-div">
-                    <button type="submit">
+                    <button type="submit" name="submit" id="regbtn" value="Register">
                         Register
                     </button>
+
+                    <input type="hidden" name="action" value="register">
                 </div>
             </form>
         </main>

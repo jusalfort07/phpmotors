@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/phpmotors/css/style.css">
-    <link rel="stylesheet" href="/phpmotors/css/login.css">
-    <title>Account Login | PHP Motors</title>
+    <link rel="stylesheet" href="/phpmotors/css/add-classification.css">
+
+    <title>Add Classification | PHP Motors</title>
 </head>
 <body>
     <div class="content">
@@ -16,13 +17,13 @@
 
         <nav>
             <?php
-                // require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/navigation.php';
+            //  require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/navigation.php';
                 echo $navList;
             ?>
         </nav>
 
         <main>
-            <h1>Sign In</h1>
+            <h1>Add Classification</h1>
 
             <?php
                 if(isset($message)){
@@ -30,31 +31,23 @@
                 }
             ?>
 
-            <form action="GET" class="log-in-form">
-                <div class="email form-div">
-                    <label for="clientEmail">
-                        Email:
+            <form action="/phpmotors/vehicles/index.php" method="POST">
+                <div class="form-div classification-name">
+                    <label for="classificationName">
+                        Classification Name
                     </label>
-
-                    <input type="text" name="clientEmail" id="clientEmail">
-                </div>
-
-                <div class="password form-div">
-                    <label for="clientPassword">
-                        Password:
-                    </label>
-
-                    <input type="text" name="clientPassword" id="clientPassword">
+                    <input type="text" id="classificationName" name="classificationName">
                 </div>
 
                 <div class="form-button form-div">
                     <button type="submit">
-                        Sign-in
+                        Add Classification
                     </button>
+
+                    <input type="hidden" name="action" value="save_classification">
                 </div>
             </form>
 
-            <a class="register-link" href="/phpmotors/accounts/index.php?action=registration">Not a member yet?</a>
         </main>
 
         <footer>
