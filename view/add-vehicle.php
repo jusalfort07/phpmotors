@@ -23,6 +23,13 @@
 
         <main>
             <h1>Add Vehicle</h1>
+
+            <?php
+                if(isset($message)){
+                    echo $message;
+                }
+            ?>
+
             <form action="/phpmotors/vehicles/index.php" method="POST">
                 <div  class="form-div car-classification">
                     <label for="classifcationId">Classification</label>
@@ -46,12 +53,12 @@
     
                 <div class="form-div">
                     <label for="invImage">Image Path</label>
-                    <input type="text" id="invImage" name="invImage">
+                    <input type="text" id="invImage" name="invImage" value="/phpmotors/images/no-image.png">
                 </div>
     
                 <div class="form-div">
                     <label for="invThumbnail">Thumbnail Path</label>
-                    <input type="text" id="invThumbnail" name="invThumbnail">
+                    <input type="text" id="invThumbnail" name="invThumbnail" value="/phpmotors/images/no-image.png">
                 </div>
     
                 <div class="form-div">

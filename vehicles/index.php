@@ -16,9 +16,9 @@ foreach ($classifications as $classification) {
     $navList .= "<li><a href='/phpmotors/index.php?action=".urlencode($classification['classificationName'])."' title='View our $classification[classificationName] product line'>$classification[classificationName]</a></li>";
 }
 
-// Build dynamic select using the $classifications array
 $navList .= '</ul>';
 
+// Build dynamic select using the $classifications array
 $classificationList = '<select name="classificationId">';
 
 $classificationList .= '<option value="0" selected>Choose Car Classification</option>';
@@ -52,8 +52,7 @@ switch ($action){
         $regOutcome = addCarClassification($classificationName);
 
         if($regOutcome === 1){
-            $message = "<p>Successfully added $classificationName to car classifications.</p>";
-            include '../view/vehicle-management.php';
+            header('Location: http://localhost/phpmotors/vehicles/index.php'); 
             exit;
         } else {
             $message = "<p>Sorry, $classificationName has not been added successfully.</p>";
@@ -89,7 +88,7 @@ switch ($action){
 
         if($regOutcome === 1){
             $message = "<p>Successfully added $invMake $invModel to inventory.</p>";
-            include '../view/vehicle-management.php';
+            include '../view/add-vehicle.php';
             exit;
         } else {
             $message = "<p>Sorry, $invMake $invModel has not been added successfully.</p>";
