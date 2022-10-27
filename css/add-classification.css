@@ -20,6 +20,16 @@ input{
     padding: 5px;
 }
 
+.error-message {
+    font-size: medium;
+    color: red;
+}
+
+.classification-name span{
+    font-size: medium;
+    color: var(--gray);
+}
+
 .form-div{
     margin: 10px;
 }
