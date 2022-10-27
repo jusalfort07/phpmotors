@@ -7,12 +7,9 @@
     --white: #ffffff;
 }
 
-form{
-    font-size: large;
-}
-
 label {
     display: block;
+    font-size: large;
 }
 
 input {
@@ -34,4 +31,8 @@ input {
 .register-link {
     font-size: large;
     margin: 10px;
+}
+
+.password span {
+    font-size: medium;
 }

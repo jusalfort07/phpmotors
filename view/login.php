@@ -30,13 +30,13 @@
                 }
             ?>
 
-            <form action="GET" class="log-in-form">
+            <form action="/phpmotors/accounts/index.php" method="POST" class="log-in-form">
                 <div class="email form-div">
                     <label for="clientEmail">
                         Email:
                     </label>
 
-                    <input type="text" name="clientEmail" id="clientEmail">
+                    <input type="email" name="clientEmail" id="clientEmail" required value="<?php if(isset($clientEmail)){echo $clientEmail;}  ?>">
                 </div>
 
                 <div class="password form-div">
@@ -44,13 +44,23 @@
                         Password:
                     </label>
 
-                    <input type="text" name="clientPassword" id="clientPassword">
+                    <span>Passwords must be atleast 8 characters and contains at least 1 number,
+                        1 capital letter, and 1 special character</span>
+
+                    <input 
+                    type="password" 
+                    name="clientPassword" 
+                    id="clientPassword" 
+                    pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    required>
                 </div>
 
                 <div class="form-button form-div">
                     <button type="submit">
                         Sign-in
                     </button>
+
+                    <input type="hidden" name="action" value="Login">
                 </div>
             </form>
 

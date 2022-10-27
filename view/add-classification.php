@@ -25,18 +25,31 @@
         <main>
             <h1>Add Classification</h1>
 
-            <?php
-                if(isset($message)){
-                    echo $message;
-                }
-            ?>
+            <div class="error-message">
+                <?php
+                    if(isset($message)){
+                        echo $message;
+                    }
+                ?>
+            </div>
 
             <form action="/phpmotors/vehicles/index.php" method="POST">
                 <div class="form-div classification-name">
                     <label for="classificationName">
                         Classification Name
                     </label>
-                    <input type="text" id="classificationName" name="classificationName">
+
+                    <input 
+                        type="text" 
+                        maxlength="30" 
+                        id="classificationName" 
+                        name="classificationName" 
+                        value="<?php if(isset($classificationName)){
+                                        echo $classificationName;
+                                    }?>" 
+                        required>
+
+                    <span>*Input is limited to 30 characters.</span>
                 </div>
 
                 <div class="form-button form-div">
