@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Vehicles Controller
 require_once '../library/connections.php';
 require_once '../model/main-model.php';

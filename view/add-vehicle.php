@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_SESSION['loggedin'])){
+        header("Location: /phpmotors/");
+    } else if ($_SESSION['clientData']['clientLevel'] == 1){
+        header("Location: /phpmotors/");
+    }
+?>
 <?php 
 // Build dynamic select using the $classifications array
 $classificationList = '<select name="classificationId">';

@@ -26,11 +26,11 @@
 
             <?php
                 if(isset($message)){
-                    echo $message;
+                    echo $_SESSION['message'];
                 }
             ?>
 
-            <form action="/phpmotors/accounts/index.php" method="POST" class="log-in-form">
+            <form action="/phpmotors/accounts/" method="POST" class="log-in-form">
                 <div class="email form-div">
                     <label for="clientEmail">
                         Email:

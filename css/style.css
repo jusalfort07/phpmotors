@@ -20,22 +20,27 @@ body {
 }
 
 /* Header Styles */
-header {
+/* header {
     display: flex;
-    justify-content: space-between;
-}
+} */
 
 header img {
     left: 0px;
 }
 
-header a {
+header .my-account-link {
+    float: inline-end;
     margin: 20px;
-    margin-right: 40px;
     color: var(--darkgray);
+    margin-left: 0px;
     text-decoration: none;
     font-size: larger;
 }
+
+.my-account-link:hover{
+    text-decoration: underline;
+}
+
 
 /* Navigation Styles */
 nav {
