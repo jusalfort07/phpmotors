@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_SESSION['loggedin'])){
+        header("Location: /phpmotors/");
+    } else if ($_SESSION['clientData']['clientLevel'] == 1){
+        header("Location: /phpmotors/");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

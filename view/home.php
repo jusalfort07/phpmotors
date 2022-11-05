@@ -12,7 +12,11 @@
 <body>
     <div class="content" id="content">
         <header>
-            <?php require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; ?>
+            <?php 
+                require $_SERVER['DOCUMENT_ROOT'] . '/phpmotors/snippets/header.php'; 
+            ?>
+
+            <br>
         </header>
 
         <nav>
