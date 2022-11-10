@@ -80,6 +80,11 @@ footer p {
     margin: 0px;
 }
 
+.error-message {
+    font-size: medium;
+    color: red;
+}
+
 @media only screen and (min-width: 64rem) {
     body{
         background-image: url(../images/site/small_check.jpg);
