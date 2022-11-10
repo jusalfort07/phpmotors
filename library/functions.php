@@ -21,4 +21,18 @@ function navList($classifications){
 
     return $navList;
 }
+
+function buildClassificationsList($classifications){
+    $classificationList = '<select name="classificationId" id="classificationList">';
+
+    $classificationList .= '<option value="0" selected>Choose Car Classification</option>';
+
+    foreach($classifications as $classification){
+        $classificationList .= "<option value='$classification[classificationId]'>$classification[classificationName]</option>"; 
+    }
+
+    $classificationList .= '</select>';
+
+    return $classificationList;
+}
 ?>
