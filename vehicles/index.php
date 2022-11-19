@@ -175,7 +175,34 @@ switch ($action){
         include '../view/vehicle-delete.php';
 
         break;
+    case 'classification':
+        $classificationName = filter_input(INPUT_GET, 'classificationName', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $vehicles = getVehiclesByClassification($classificationName);
 
+        if(!count($vehicles)){
+            $message = "<p class='notice'>Sorry, no $classificationName vehicles could be found.</p>";
+        } else {
+            $vehicleDisplay = buildVehiclesDisplay($vehicles);
+        }
+
+        include '../view/classification.php';
+        
+        break;
+
+    case 'vehicle_detail':
+        $invId = filter_input(INPUT_GET, 'invId', FILTER_VALIDATE_INT);
+        $vehicle = getInvItemInfo($invId);
+
+        if($vehicle == false) {
+            $message = 'Sorry, we cannot find that vehicle.';
+
+            include '../view/vehicle-detail.php';
+            exit;
+        }
+
+        include '../view/vehicle-detail.php';
+
+        break;
     default:
         $classificationList = buildClassificationsList($classifications);
         

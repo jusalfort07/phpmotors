@@ -1,0 +1,54 @@
+:root {
+    --lightgray: #bababa;
+    --gray: #8d8d8d;
+    --lightblue: #a6cbeb;
+    --blue: #4c96d7;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+}
+
+main {
+    margin: 5px;
+}
+
+h1 {
+    text-align: center;
+    border: 2px solid var(--darkgray);
+    margin-bottom: 5px;
+}
+
+table, td {
+    border: double 2px var(--darkgray);
+}
+
+td {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#table_div {
+    margin-bottom: 5px;
+}
+
+img{
+    max-width: 100%;
+}
+
+#img_div {
+    border: 2px solid var(--darkgray);
+    padding: 3px;
+
+    margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 64rem){
+
+#flex_container {
+    display: flex;
+    border: 1px solid var(--lightgray);
+}
+
+#flex_container div {
+    margin: 5px;
+}
+}

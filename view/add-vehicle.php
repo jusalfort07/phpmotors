@@ -83,12 +83,12 @@ $classificationList .= '</select>';
     
                 <div class="form-div">
                     <label for="invImage">Image Path</label>
-                    <input type="text" id="invImage" name="invImage" value="<?php if(isset($invImage)){ echo $invImage ;} else { echo "/phpmotors/images/no-image.png"; } ?>" required>
+                    <input type="text" id="invImage" name="invImage" value="<?php if(isset($invImage)){ echo $invImage ;} else { echo "/phpmotors/images/vehicles/no-image.png"; } ?>" required>
                 </div>
     
                 <div class="form-div">
                     <label for="invThumbnail">Thumbnail Path</label>
-                    <input type="text" id="invThumbnail" name="invThumbnail" value="<?php if(isset($invThumbnail)){ echo $invThumbnail ;} else { echo "/phpmotors/images/no-image.png"; } ?>" required>
+                    <input type="text" id="invThumbnail" name="invThumbnail" value="<?php if(isset($invThumbnail)){ echo $invThumbnail ;} else { echo "/phpmotors/images/vehicles/no-image.png"; } ?>" required>
                 </div>
     
                 <div class="form-div">
