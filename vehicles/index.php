@@ -6,6 +6,7 @@ require_once '../model/main-model.php';
 
 //Get the vehicles model
 require_once '../model/vehicles-model.php';
+require_once '../model/uploads-model.php';
 require_once '../library/functions.php';
 
 $classifications = getClassifications();
@@ -191,7 +192,9 @@ switch ($action){
 
     case 'vehicle_detail':
         $invId = filter_input(INPUT_GET, 'invId', FILTER_VALIDATE_INT);
-        $vehicle = getInvItemInfo($invId);
+        $vehicle = getVehicleDetail($invId);
+        $otherImages = getOtherImages($invId);
+        $otherImagesList = buildOtherImagesList($otherImages);
 
         if($vehicle == false) {
             $message = 'Sorry, we cannot find that vehicle.';

@@ -30,7 +30,7 @@
             <h2>Welcome to PHP Motors!</h2>
 
             <div class="delorean">
-                <img src="images/vehicles/delorean.jpg" alt="">
+                <img src="uploads/images/vehicles/delorean.jpg" alt="">
 
                 <div class="delorean-card">
                     <div class="card-text">

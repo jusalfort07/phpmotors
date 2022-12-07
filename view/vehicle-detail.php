@@ -50,8 +50,20 @@
             </h1>
             
             <div id="flex_container">
+                <div id="other_images_div">
+                    <?php
+                        echo $otherImagesList;
+                    ?>
+                </div>
+                
                 <div id="img_div">
-                    <img src="<?php echo $vehicle['invImage']; ?>" alt="Image of <?php echo $vehicle['invMake'] . ' ' . $vehicle['invModel']; ?>">
+                    <img src="<?php echo $vehicle['imgPath']; ?>" alt="Image of <?php echo $vehicle['invMake'] . ' ' . $vehicle['invModel']; ?>">
+                </div>
+
+                <div id="other_images_div_2">
+                    <?php
+                        echo $otherImagesList;
+                    ?>
                 </div>
 
                 <div id="table_div">
