@@ -65,6 +65,52 @@ img{
     margin-bottom: 10px;
 }
 
+.login-div{
+    text-align: center;
+}
+
+.login-div a{
+    text-decoration: none ;
+    color: var(--white);
+    margin-top: 10px;
+    padding: 5px;
+    font-size: medium;
+    background-color: var(--darkgray);
+}
+
+form .form-div{
+    text-align: center;
+}
+
+.form-button button {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: medium;
+    color: var(--white);
+    background-color: var(--darkgray);
+}
+
+.review-list{
+    list-style: none;
+    padding: 0px;
+}
+
+.review-list li {
+    margin: 10px;
+    border: #3a3a3a 1px double;
+    padding: 5px;
+}
+
+.review-list li .name{
+    color: var(--darkgray);
+    margin-bottom: 10px;
+}
+
+.review-list li .reviewDate{
+    color: var(--darkgray);
+    font-size: small;
+    text-align: right;
+}
 
 
 @media only screen and (min-width: 64rem){
@@ -100,5 +146,9 @@ img{
 
 #other_images_div ul{
     padding: 0px;
+}
+
+form .form-div{
+    text-align: right;
 }
 }

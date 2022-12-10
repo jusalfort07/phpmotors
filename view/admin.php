@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/phpmotors/css/style.css">
+    <link rel="stylesheet" href="/phpmotors/css/admin.css">
+
     <title>Admin | PHP Motors</title>
 </head>
 <body>
@@ -60,6 +62,47 @@
                         echo "<a href='/phpmotors/vehicles'>Vehicle Management</a>";
                     }
                 ?>
+            </div>
+
+            <div class="reviews-div">
+                <h3>Reviews Made:</h3>
+
+                <?php if(isset($review_message)){ echo $review_message; } ?>
+
+                <div class="reviews">
+                    <?php 
+                        $reviews_table = '<table>';
+
+                        $reviews_table .= 
+                            '
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Review Date</th>
+                                <th>Actions</th>
+                            </tr>
+                            ';
+
+                        foreach($reviews as $review){
+                            $time_stamp = strtotime($review['reviewDate']);
+
+                            $reviews_table .= 
+                                '
+                                <tr>
+                                    <td>'. $review['invMake']." " . $review['invModel'] .'</td>
+                                    <td>'. date('F j, Y', $time_stamp) .'</td>
+                                    <td>
+                                        <a class="edit" href="/phpmotors/reviews/?action=edit_review&reviewId='. urlencode($review['reviewId']) .'">Edit</a>
+                                        <a class="delete" href="/phpmotors/reviews/?action=delete_review&reviewId='. urlencode($review['reviewId']) .'">Delete</a>
+                                    </td>
+                                </tr>
+                                ';
+                        }
+
+                        $reviews_table .= '</table>';
+
+                        echo $reviews_table;
+                    ?>
+                </div>
             </div>
             
         </main>

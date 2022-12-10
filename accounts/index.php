@@ -4,6 +4,7 @@ session_start();
 require_once '../library/connections.php';
 require_once '../model/main-model.php';
 require_once '../model/accounts-model.php';
+require_once '../model/reviews-model.php';
 require_once '../library/functions.php';
 
 $classifications = getClassifications();
@@ -47,6 +48,8 @@ switch ($action){
         $_SESSION['loggedin'] = TRUE;
         array_pop($clientData);
         $_SESSION['clientData'] = $clientData;
+
+        $reviews = getReviewsByClientId($_SESSION['clientData']['clientId']);
 
         include '../view/admin.php';
 
@@ -190,6 +193,8 @@ switch ($action){
 
 
     default:
+        $reviews = getReviewsByClientId($_SESSION['clientData']['clientId']);
+        
         include '../view/admin.php';
 
         break;

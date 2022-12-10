@@ -1,0 +1,32 @@
+:root {
+    --lightgray: #bababa;
+    --gray: #8d8d8d;
+    --lightblue: #a6cbeb;
+    --blue: #4c96d7;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+}
+
+table, th , td{
+    border: var(--darkgray) 1px double;
+}
+
+td, th{
+    padding: 5px;
+}
+
+.edit{
+    background-color: var(--darkgray);
+    color: var(--white);
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px;
+}
+
+.delete{
+    background-color: var(--darkgray);
+    color: var(--white);
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px;
+}

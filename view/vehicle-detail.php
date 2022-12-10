@@ -91,6 +91,62 @@
                     </table>
                 </div>
             </div>
+
+            <div id="reviews-container">
+                <h3>Customer Reviews:</h3>
+                
+                <?php 
+                    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != TRUE){
+                        echo 
+                            '<div class="login-div">
+                                <a href="/phpmotors/accounts/index.php?action=login">Log in to leave a review</a>
+                            </div>
+                            ';
+                    } else {
+                        echo substr($_SESSION['clientData']['clientFirstname'], 0, 1) . ". " . $_SESSION['clientData']['clientLastname'];
+                        echo
+                            '
+                            <form action="/phpmotors/reviews/index.php" method="POST">
+                                <input type="hidden" name="clientId" value="' . $_SESSION['clientData']['clientId'] . '">
+                                <input type="hidden" name="invId" value="' . $invId . '">
+                                <label for="reviewText" style="display:block; margin-top: 10px;">Comment:</label>
+                                <textarea name="reviewText" id="reviewText" required cols="30" rows="10" style="width: 100%; height: 50px; font-size: large;" placeholder="Type your review."></textarea>
+
+                                <div class="form-button form-div">
+                                    <button type="submit">
+                                        Add Review
+                                    </button>
+
+                                    <input type="hidden" name="action" value="add_review">
+                                </div>
+                            </form>
+                            ';
+                    }
+                ?>
+
+                <div class="vehicle-reviews">
+                    <?php 
+                        
+                        $review_list = "<ul class=". "review-list" .">";
+
+                        foreach($reviews as $review){
+                            $timestamp  = strtotime($review['reviewDate']);
+                            
+                            $review_list .= "<li>
+                                                <div class=". "name" .">". substr($review['clientFirstname'], 0 , 1) . $review['clientLastname'] ."</div>
+                                                <div class=". "review" .">". $review['reviewText'] ."</div>
+                                                <div class=". "reviewDate" ."> review date: ". date('F j, Y, g:i a', $timestamp) . "</div>
+                                            </li>";
+                        }
+
+                        $review_list .= "</ul>";
+
+                        echo $review_list;
+
+                    ?>
+                </div>
+                
+            </div>
         </main>
 
         <footer>

@@ -1,0 +1,24 @@
+:root {
+    --lightgray: #bababa;
+    --gray: #8d8d8d;
+    --lightblue: #a6cbeb;
+    --blue: #4c96d7;
+    --darkgray: #3a3a3a;
+    --white: #ffffff;
+}
+
+p {
+    font-size: large;
+}
+
+textarea{
+    font-size: large;
+}
+
+.form-button .delete-btn {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: medium;
+    color: var(--white);
+    background-color: var(--darkgray);
+}

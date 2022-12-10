@@ -7,6 +7,7 @@ require_once '../model/main-model.php';
 //Get the vehicles model
 require_once '../model/vehicles-model.php';
 require_once '../model/uploads-model.php';
+require_once '../model/reviews-model.php';
 require_once '../library/functions.php';
 
 $classifications = getClassifications();
@@ -195,6 +196,8 @@ switch ($action){
         $vehicle = getVehicleDetail($invId);
         $otherImages = getOtherImages($invId);
         $otherImagesList = buildOtherImagesList($otherImages);
+
+        $reviews = getReviewByInventoryId($invId);
 
         if($vehicle == false) {
             $message = 'Sorry, we cannot find that vehicle.';
